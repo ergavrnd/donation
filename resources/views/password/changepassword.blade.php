@@ -24,7 +24,7 @@
 
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
-                <li><a class="nav-link scrollto" href="/home">Beranda</a></li>
+                <li><a class="nav-link scrollto" href="/">Beranda</a></li>
                 <li class="dropdown"><a href="#"><span>{{ auth()->user()->username }}</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                     <li><a href="/profil">Profil</a></li>

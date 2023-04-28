@@ -66,3 +66,12 @@ Route::get('/detailprogram', function () {
 Route::get('/payment', function () {
     return view('user.payment');
 });
+
+///////////////////////////ADMIN//////////////////////////////
+Route::get('/dashboard', function () {
+    return view('admin.admin');
+});
+
+Route::get('/dashboard/kategoriprogram', function () {
+    return view('admin.kategori.index');
+});

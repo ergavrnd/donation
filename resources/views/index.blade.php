@@ -48,32 +48,35 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Beranda</a></li>
-          <li><a class="nav-link scrollto" href="#berita">Berita</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
-          @auth
-            <li class="dropdown"><a href="#"><span>{{ auth()->user()->username }}</span> <i class="bi bi-chevron-down"></i></a>
-                <ul>
-                <li><a href="/profil">Profil</a></li>
-                <li><a href="/ubahpassword">Ubah Password</a></li>
-                <form action="/logout" method="post">
-                @csrf
-                    <button class="dropdown-item" type="submit">Keluar</button>
-                </form>
+            <li><a class="nav-link scrollto active" href="#hero">Beranda</a></li>
+            <li><a class="nav-link scrollto" href="#berita">Berita</a></li>
 
-                </ul>
-            </li>
-          @else
-            <li class="dropdown"><a href="#"><span>User</span> <i class="bi bi-chevron-down"></i></a>
-                <ul>
-                <li><a href="/login">Masuk</a></li>
-                <li><a href="/register">Daftar</a></li>
-                </ul>
-            </li>
-          @endauth
-
-
-
+            @auth
+                <li class="dropdown"><a href="#"><span>Riwayat</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                    <li><a href="/login">Program</a></li>
+                    <li><a href="/register">Donasi</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#"><span>{{ auth()->user()->username }}</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/profil">Profil</a></li>
+                        <li><a href="/ubahpassword">Ubah Password</a></li>
+                        <form action="/logout" method="post">
+                        @csrf
+                            <button class="dropdown-item" type="submit">Keluar</button>
+                        </form>
+                    </ul>
+                </li>
+            @else
+                <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
+                <li class="dropdown"><a href="#"><span>User</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                    <li><a href="/login">Masuk</a></li>
+                    <li><a href="/register">Daftar</a></li>
+                    </ul>
+                </li>
+            @endauth
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -609,7 +612,73 @@
 
 
       </div>
-    </section><!-- End Testimonials Section -->
+    </section>
+    <!-- End Testimonials Section -->
+
+    @auth
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Donatur</h2>
+                <p>Donatur Terbaik</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                    <div class="member" data-aos="fade-up" data-aos-delay="100">
+                        <div class="member-img">
+                        <img src="assets/img/team/nazar.jpeg" class="img-fluid" alt="">
+                        </div>
+                        <div class="member-info">
+                        <h4>Rizky Nazar</h4>
+                        <span>Surabaya</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                    <div class="member" data-aos="fade-up" data-aos-delay="200">
+                        <div class="member-img">
+                        <img src="assets/img/team/pevita.jpeg" class="img-fluid" alt="">
+                        </div>
+                        <div class="member-info">
+                        <h4>Pevita Pearce</h4>
+                        <span>Padang</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                    <div class="member" data-aos="fade-up" data-aos-delay="200">
+                        <div class="member-img">
+                        <img src="assets/img/team/refal.jpeg" class="img-fluid" alt="">
+                        </div>
+                        <div class="member-info">
+                        <h4>Refal Hady</h4>
+                        <span>Bandung</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                    <div class="member" data-aos="fade-up" data-aos-delay="400">
+                        <div class="member-img">
+                            <img src="assets/img/team/maudy.jpeg" class="img-fluid" alt="">
+                            </div>
+                            <div class="member-info">
+                            <h4>Maudy Ayunda</h4>
+                            <span>Jakarta</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- End Team Section -->
+    @endauth
 
   <!-- ======= Footer ======= -->
   <footer id="footer">

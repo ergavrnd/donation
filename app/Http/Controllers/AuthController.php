@@ -22,9 +22,6 @@ class AuthController extends Controller
         return view('validasi');
     }
 
-    public function home(){
-        return view('home');
-    }
 
     public function validasi(Request $request){
         // dd("erga cantik");
@@ -36,7 +33,7 @@ class AuthController extends Controller
         $validatedData = $request->validate($rules);
         $validatedData['password'] = Hash::make($validatedData['password']);
         User::where('id', auth()->user()->id)->update($validatedData);
-        return redirect('/home');
+        return redirect('/');
     }
 
     public function login()
@@ -61,7 +58,7 @@ class AuthController extends Controller
                     if(auth()->user()->roleid ==1){
                         return redirect()->intended('/dashboard');
                     }else{
-                        return redirect()->intended('/home');
+                        return redirect()->intended('/');
                     }
                 }else{
                     return back()->with('loginError', 'Silahkan coba lagi untuk masuk ke sistem');
@@ -125,7 +122,5 @@ class AuthController extends Controller
         } else {
             return back()->with('error', 'Kode otp salah!');
         }
-
-
     }
 }

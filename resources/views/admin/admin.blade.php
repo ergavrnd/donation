@@ -4,7 +4,7 @@
     <h3 class="page-title">
         <span class="page-title-icon bg-gradient-primary text-white me-2">
         <i class="mdi mdi-home"></i>
-        </span> Dashboard
+        </span> Dashboard DoNation
     </h3>
     <nav aria-label="breadcrumb">
         <ul class="breadcrumb">
@@ -15,42 +15,42 @@
     </nav>
     </div>
     <div class="row">
-    <div class="col-md-4 stretch-card grid-margin">
-        <div class="card bg-gradient-danger card-img-holder text-white">
-        <a class="text-white" href="">
-            <div class="card-body">
-            <img src="admin/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
-            <h4 class="font-weight-normal mb-3" href="/dashboard/kategori">Program yang diajukan <i class="mdi mdi-checkbox-multiple-blank mdi-24px float-right"></i>
-            </h4>
-            <h2 class="mb-5">45,6334</h2>
+        <div class="col-md-4 stretch-card grid-margin">
+            <div class="card bg-gradient-success card-img-holder text-white">
+                <a class="text-white" style="text-decoration: none" href="/dashboard/allprogram">
+                    <div class="card-body">
+                        <img src="admin/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                        <h4 class="font-weight-normal mb-3">Total program <i class="mdi mdi-folder-multiple-outline mdi-24px float-right"></i></h4>
+                        <h2 class="mb-5">{{ $all->count() }}</h2>
+                    </div>
+                </a>
             </div>
-        </a>
         </div>
-    </div>
-    <div class="col-md-4 stretch-card grid-margin">
-        <div class="card bg-gradient-info card-img-holder text-white">
-        <a class="text-white" href="">
-            <div class="card-body">
-            <img src="admin/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
-            <h4 class="font-weight-normal mb-3">Program yang telah terlaksana <i class="mdi mdi-checkbox-multiple-marked mdi-24px float-right"></i>
-            </h4>
-            <h2 class="mb-5">45,6334</h2>
+        <div class="col-md-4 stretch-card grid-margin">
+            <div class="card bg-gradient-danger card-img-holder text-white">
+            <a class="text-white" style="text-decoration: none" href="/dashboard/pendingprogram">
+                <div class="card-body">
+                <img src="admin/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                <h4 class="font-weight-normal mb-3" href="/dashboard/kategori">Program yang diajukan <i class="mdi mdi-checkbox-multiple-blank mdi-24px float-right"></i>
+                </h4>
+                <h2 class="mb-5">{{ $pending->count() }}</h2>
+                </div>
+            </a>
             </div>
-        </a>
         </div>
-    </div>
-    <div class="col-md-4 stretch-card grid-margin">
-        <div class="card bg-gradient-success card-img-holder text-white">
-        <a class="text-white" href="">
-            <div class="card-body">
-            <img src="admin/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
-            <h4 class="font-weight-normal mb-3">Total program <i class="mdi mdi-folder-multiple-outline mdi-24px float-right"></i>
-            </h4>
-            <h2 class="mb-5">95,5741</h2>
+        <div class="col-md-4 stretch-card grid-margin">
+            <div class="card bg-gradient-info card-img-holder text-white">
+            <a class="text-white" style="text-decoration: none" href="/dashboard/doneprogram">
+                <div class="card-body">
+                <img src="admin/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                <h4 class="font-weight-normal mb-3">Program yang telah terlaksana <i class="mdi mdi-checkbox-multiple-marked mdi-24px float-right"></i>
+                </h4>
+                <h2 class="mb-5">{{ $done->count() }}</h2>
+                </div>
+            </a>
             </div>
-        </a>
         </div>
-    </div>
+
     </div>
     <div class="row">
     <div class="col-12 grid-margin">

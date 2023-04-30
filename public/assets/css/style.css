@@ -838,6 +838,7 @@ section {
 
 .portfolio .portfolio-wrap img {
   transition: all ease-in-out 0.3s;
+  /* width:200px; */
 }
 
 .portfolio .portfolio-wrap .portfolio-info {
@@ -1917,3 +1918,106 @@ p {
 
 /* end css profil */
 
+/*--------------------------------------------------------------
+# Hayo Section
+--------------------------------------------------------------*/
+#hayo {
+    width: 100%;
+    height: 100vh;
+    background: url("../img/portfolio/banjir2.jpg") top center;
+    background-size: cover;
+    position: relative;
+  }
+
+  #hayo:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  #hayo .container {
+    position: relative;
+    padding-top: 74px;
+    text-align: center;
+  }
+
+  #hayo h1 {
+    margin: 0;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 64px;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+  }
+
+  #hayo h1 span {
+    color: #ffc451;
+  }
+
+  #hayo h2 {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 10px 0 0 0;
+    font-size: 24px;
+  }
+
+  #hayo .icon-box {
+    padding: 30px 20px;
+    transition: ease-in-out 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    height: 100%;
+    text-align: center;
+  }
+
+  #hayo .icon-box i {
+    font-size: 32px;
+    line-height: 1;
+    color: #ffc451;
+  }
+
+  #hayo .icon-box h3 {
+    font-weight: 700;
+    margin: 10px 0 0 0;
+    padding: 0;
+    line-height: 1;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  #hayo .icon-box h3 a {
+    color: #fff;
+    transition: ease-in-out 0.3s;
+  }
+
+  #hayo .icon-box h3 a:hover {
+    color: #ffc451;
+  }
+
+  #hayo .icon-box:hover {
+    border-color: #ffc451;
+  }
+
+  @media (min-width: 1024px) {
+    #hayo {
+      background-attachment: fixed;
+    }
+  }
+
+  @media (max-width: 768px) {
+    #hayo {
+      height: auto;
+    }
+
+    #hayo h1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+
+    #hayo h2 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }

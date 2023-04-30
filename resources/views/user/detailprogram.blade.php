@@ -125,64 +125,66 @@
 
   <main id="main">
 
-     <!-- ======= About Section ======= -->
-     <section id="about" class="about">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
         <div class="container" data-aos="fade-up">
 
-          <div class="row">
-            <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-              {{-- <img src="assets/img/donation.jfif" class="img-fluid" alt=""> --}}
-            </div>
-            <div class="col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 content" style="margin-top: 3%" data-aos="fade-right" data-aos-delay="100">
-              <h3>#BantuanBencana : Donasi untuk Bantu Korban Banjir</h3>
-              <p class="small mb-0"><i class="far fa-star fa-lg"></i> <span class="mx-2">|</span> Dibuat oleh
-                <strong>Yayasan Al Ma'ruf</strong> pada 11 April , 2021</p>
-            <div style="margin-top: 40px"> <h5>Rp46.544.322</h5> </div>
-            <div style="margin-top: 10px"> <h6>Terkumpul dari Rp50.000.000</h6> </div>
-              <div class="progress" style="margin-top: 20px">
-                <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-                  <p class="fst-" style="margin-top: 50px">
-                    Jelang Imlek, banjir pun melanda daerah Pati, Demak, Kudus, Brebes, hingga Kebumen. Banjir paling parah terjadi di Kecamatan Sayung, Demak, Jawa Tengah. Ada sekitar 31.099 jiwa yang menjadi korban banjir di kawasan Sayung.
+            <div class="row">
+                <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+                {{-- <img src="assets/img/donation.jfif" class="img-fluid" alt=""> --}}
+                </div>
+                <div class="col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 content" style="margin-top: 3%" data-aos="fade-right" data-aos-delay="100">
+                <h3>#BantuanBencana : Donasi untuk Bantu Korban Banjir</h3>
+                <p class="small mb-0"><i class="far fa-star fa-lg"></i> <span class="mx-2">|</span> Dibuat oleh
+                    <strong>Yayasan Al Ma'ruf</strong> pada 11 April , 2021</p>
+                <div style="margin-top: 40px"> <h5>Rp46.544.322</h5> </div>
+                <div style="margin-top: 10px"> <h6>Terkumpul dari Rp50.000.000</h6> </div>
+                <div class="progress" style="margin-top: 20px">
+                    <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                    <p class="fst-" style="margin-top: 50px">
+                        Jelang Imlek, banjir pun melanda daerah Pati, Demak, Kudus, Brebes, hingga Kebumen. Banjir paling parah terjadi di Kecamatan Sayung, Demak, Jawa Tengah. Ada sekitar 31.099 jiwa yang menjadi korban banjir di kawasan Sayung.
 
-                    Nah, bagi kamu yang peduli terhadap musibah tersebut, bisa ikut membantu dengan membuatkan link donasi. Jika donasi terkumpul, kamu dapat memberikan langsung kepada korban banjir di daerah terdekat.
-                  </p>
-              <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
-              </div>
-              <div class="parent" style="margin-top: 60px">
-             <a href="/payment"> <button type="button" class="btn btn-primary btn-lg">Donasi Sekarang</button></a>
-            </div>
-              {{-- <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" style="margin-top:40px" data-aos="fade-right" data-aos-delay="100">
-                <h6><b>Penggalang Dana :</b></h6>
-            </div>
-            <div style="margin-top: 10px"> <h6>Yayasan Al Ma'ruf</h6> </div> --}}
+                        Nah, bagi kamu yang peduli terhadap musibah tersebut, bisa ikut membantu dengan membuatkan link donasi. Jika donasi terkumpul, kamu dapat memberikan langsung kepada korban banjir di daerah terdekat.
+                    </p>
+                <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
+                </div>
+                <div class="parent" style="margin-top: 60px">
+                <a href="/payment"> <button type="button" class="btn btn-primary btn-lg">Donasi Sekarang</button></a>
+                </div>
+                {{-- <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" style="margin-top:40px" data-aos="fade-right" data-aos-delay="100">
+                    <h6><b>Penggalang Dana :</b></h6>
+                </div>
+                <div style="margin-top: 10px"> <h6>Yayasan Al Ma'ruf</h6> </div> --}}
 
-          </div>
+            </div>
 
         </div>
-      </section><!-- End About Section -->
+    </section>
+    <!-- End About Section -->
 
 
     <!-- ======= Clients Section ======= -->
     <section id="clients" class="clients">
         <div class="container" data-aos="zoom-in">
 
-          <div class="clients-slider swiper">
-            <div class="swiper-wrapper align-items-center">
-              <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+            <div class="clients-slider swiper">
+                <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+                </div>
+                <div class="swiper-pagination"></div>
             </div>
-            <div class="swiper-pagination"></div>
-          </div>
 
         </div>
-      </section><!-- End Clients Section -->
+    </section>
+    <!-- End Clients Section -->
 
 
 

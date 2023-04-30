@@ -2,9 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\GoogleController;
+use App\Http\Controllers\Admin\ProgramController;
+use App\Http\Controllers\ProgramDonasiController;
 use App\Http\Controllers\ChangePasswordController;
 use App\Http\Controllers\Auth\ResetPasswordController;
+use App\Http\Controllers\Admin\KategoriProgamController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +22,7 @@ use App\Http\Controllers\Auth\ResetPasswordController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [HomeController::class, 'index']);
 
 
 Route::get('/login', [AuthController::class, 'login'])->name("login")->middleware('guest');
@@ -43,9 +46,7 @@ Route::get('auth/google', [GoogleController::class, 'redirectToGoogle'])->name('
 Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback'])->name('google.callback')->middleware('guest');
 Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
 
-Route::get('/profil', function () {
-    return view('user.profil');
-});
+Route::get('/profil', [HomeController::class, 'profil'])->middleware('auth');
 
 Route::get('/lupapassword', [ResetPasswordController::class, 'indexforgotpass'])->middleware('guest');
 Route::post('/lupapassword', [ResetPasswordController::class, 'forgotpass'])->middleware('guest');
@@ -56,6 +57,7 @@ Route::post('/resetpassword', [ResetPasswordController::class, 'resetpass'])->mi
 Route::get('/ubahpassword', [ChangePasswordController::class, 'index'])->middleware('auth');
 Route::post('/ubahpassword', [ChangePasswordController::class, 'store'])->middleware('auth');
 
+Route::get('/programdonasi/{slug}', [ProgramDonasiController::class, 'index'])->middleware('auth');
 
 Route::get('/listprogram', function () {
     return view('user.listprogram');
@@ -68,10 +70,24 @@ Route::get('/payment', function () {
 });
 
 ///////////////////////////ADMIN//////////////////////////////
-Route::get('/dashboard', function () {
-    return view('admin.admin');
-});
+Route::get('/dashboard', [AdminController::class, 'index'])->middleware('admin');
+Route::get('/dashboard/user', [AdminController::class, 'indexuser'])->middleware('admin');
 
-Route::get('/dashboard/kategoriprogram', function () {
-    return view('admin.kategori.index');
-});
+Route::get('/dashboard/kategoriprogram', [KategoriProgamController::class, 'index'])->middleware('admin');
+Route::get('/dashboard/createkategori', [KategoriProgamController::class, 'indexcreate'])->middleware('admin');
+Route::post('/dashboard/createkategori', [KategoriProgamController::class, 'store'])->middleware('admin');
+Route::get('/dashboard/hapuskategori', [KategoriProgamController::class, 'destroy'])->middleware('admin');
+Route::get('/dashboard/updatekategori/{slug}', [KategoriProgamController::class, 'indexupdate'])->name('updatekategori')->middleware('admin');
+Route::post('/dashboard/updatekategori', [KategoriProgamController::class, 'update'])->middleware('admin');
+Route::get('/dashboard/daftarprogram/{slug}', [KategoriProgamController::class, 'listprogram'])->name('programkategori')->middleware('admin');
+Route::get('/createslugkategori', [KategoriProgamController::class, 'checkSlug'])->middleware('admin');
+
+Route::get('/dashboard/program', [ProgramController::class, 'index'])->middleware('admin');
+Route::get('/dashboard/createprogram', [ProgramController::class, 'indexcreate'])->middleware('admin');
+Route::post('/dashboard/createprogram', [ProgramController::class, 'store'])->middleware('admin');
+
+Route::get('/dashboard/allprogram', [ProgramController::class, 'allprogram'])->middleware('admin');
+Route::get('/dashboard/pendingprogram', [ProgramController::class, 'pendingprogram'])->middleware('admin');
+Route::get('/dashboard/doneprogram', [ProgramController::class, 'doneprogram'])->middleware('admin');
+
+

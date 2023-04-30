@@ -87,8 +87,12 @@ class AuthController extends Controller
         ]);
 
         $validatedData['password'] = Hash::make($validatedData['password']);
-
+        $admin = User::all();
+        if($admin->count() == 0){
+            $validatedData['roleid'] = 1;
+        }
         User::create($validatedData);
+        
         $user = User::where('email', $request->email)->first();
         Mail::send('email.verifikasiemail', ['otp' => $request->otp, 'user' => $user], function($message) use($request){
             $message->to($request->email);

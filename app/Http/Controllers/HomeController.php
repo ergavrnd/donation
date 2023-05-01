@@ -11,7 +11,7 @@ class HomeController extends Controller
     public function index(){
         return view('index', [
             "kategori" => KategoriProgam::all(),
-            "program" => Program::all()
+            "program" => Program::paginate(9)
         ]);
     }
 

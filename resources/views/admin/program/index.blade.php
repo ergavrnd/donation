@@ -73,7 +73,7 @@
                                         <label class="badge badge-success">Selesai</label>
                                     @endif
                                 </td>
-                                <td> {{ $prog->created_at->format('D d/M/Y') }} </td>
+                                <td> {{ \Carbon\Carbon::parse($prog->created_at)->translatedFormat('l, d F Y') }} </td>
                             </tr>
                         @endforeach
                     </tbody>

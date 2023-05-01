@@ -58,7 +58,7 @@
                     <li><strong>Penanggung Jawab Program</strong>: {{ $program->user->name }}</li>
                     <li><strong>Dana Terkumpul</strong>: Rp {{ number_format($program->danaskrg, 2, ',','.') }}</li>
                     <li><strong>Target Dana</strong>: Rp {{ number_format($program->targetdana, 2, ',','.') }}</li>
-                    <li><strong>Berakhir pada</strong>: {{ date('D d/M/Y', strtotime($program->deadline)) }}</li>
+                    <li><strong>Berakhir pada</strong>: {{ \Carbon\Carbon::parse($program->deadline)->translatedFormat('l, d F Y') }}</li>
                 </ul>
                 </div>
                 <div class="portfolio-description">
@@ -91,10 +91,9 @@
                 <div class="progress" style="margin-top: 20px">
                     <div class="progress-bar progress-bar-striped" title="Rp{{ $program->danaskrg }}" style="width: {{ $program->danaskrg/$program->targetdana*100 }}%">Rp{{ number_format($program->danaskrg,'2',',','.') }}</div>
                 </div>
-                    <p class="fst-" style="margin-top: 50px">
-                        Jelang Imlek, banjir pun melanda daerah Pati, Demak, Kudus, Brebes, hingga Kebumen. Banjir paling parah terjadi di Kecamatan Sayung, Demak, Jawa Tengah. Ada sekitar 31.099 jiwa yang menjadi korban banjir di kawasan Sayung.
-
-                        Nah, bagi kamu yang peduli terhadap musibah tersebut, bisa ikut membantu dengan membuatkan link donasi. Jika donasi terkumpul, kamu dapat memberikan langsung kepada korban banjir di daerah terdekat.
+                    <p class="fst" style="margin-top: 50px">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices dui orci, ut gravida eros varius tempus. Etiam tempus venenatis fermentum. Cras et erat congue, gravida felis eget, tristique risus. Suspendisse pretium arcu sit amet ligula ullamcorper dictum. Nunc eu metus lobortis, vulputate augue sit amet, cursus eros. Duis lobortis odio et felis elementum, eu commodo erat dignissim. Aliquam at metus tortor. Pellentesque condimentum mollis sodales.
+                        Fusce euismod, est quis semper vestibulum, ipsum ipsum laoreet eros, vel ullamcorper dolor diam ut diam. Praesent consectetur tortor eget magna imperdiet, nec scelerisque nulla iaculis. In interdum porttitor faucibus. Nam sit amet dictum.
                     </p>
                 <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
                 </div>

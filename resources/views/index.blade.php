@@ -2,181 +2,179 @@
 @section('babayo')
 
     <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex align-items-center justify-content-center">
-            <div class="container" data-aos="fade-up">
+        <section id="hero" class="d-flex align-items-center justify-content-center">
+                <div class="container" data-aos="fade-up">
 
-            <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
-                <div class="col-xl-6 col-lg-8">
-                <h1>Hidup tidak selalu tentang 'memiliki', tapi juga 'berbagi'<span>.</span></h1>
-                </div>
-            </div>
-            <br>
-                @auth
-
-                <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
-                    <div class="col-lg-3 col-md-12">
-                    <div class="icon-box">
-                        <i class="ri-hand-heart-line"></i>
-                        <h3><a href="">Donasi</a></h3>
-                    </div>
-                    </div>
-                    <div class="col-lg-3 col-md-12">
-                    <div class="icon-box">
-                        <i class="ri-home-heart-line"></i>
-                        <h3><a href="">Program</a></h3>
-                    </div>
+                <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+                    <div class="col-xl-6 col-lg-8">
+                    <h1>Hidup tidak selalu tentang 'memiliki', tapi juga 'berbagi'<span>.</span></h1>
                     </div>
                 </div>
-
-                @endauth
-            </div>
-    </section>
+                <br>
+                    @auth
+                        <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+                            <div class="col-lg-3 col-md-12">
+                                <a class="text-white" href="/donasiDoNation">
+                                    <div class="icon-box">
+                                        <i class="ri-hand-heart-line"></i>
+                                        <h3>Donasi</h3>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-md-12">
+                                <a class="text-white" href="#">
+                                    <div class="icon-box">
+                                        <i class="ri-home-heart-line"></i>
+                                        <h3>Program</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    @endauth
+                </div>
+        </section>
     <!-- End Hero -->
 
   <main id="main">
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about" style="background-color: rgb(227, 236, 244)">
-      <div class="container" data-aos="fade-up">
+        <section id="about" class="about" style="background-color: rgb(227, 236, 244)">
+        <div class="container" data-aos="fade-up">
 
-        <div class="row">
-          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-            <img src="assets/img/donation.jfif" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
-            <h3>Tentang Kami</h3>
-            <p class="fst-">
-                DoNation merupakan website yang memfasilitasi serta menyalurkan donasi melalui 3 kategori program yang ada yaitu Kemanusiaan, Pendidikan, dan Infrastruktur
-            </p>
-            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
-                <h3>Visi</h3>
+            <div class="row">
+            <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+                <img src="assets/img/donation.jfif" class="img-fluid" alt="">
             </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
+                <h3>Tentang Kami</h3>
                 <p class="fst-">
-                    “Menjadi website donasi yang aktif membantu meringankan penderitaan sesama yang membutuhkan, dalam bidang Kemanusiaan, Pendidikan, dan Infrastruktur untuk mencapai dan mewujudkan kualitas hidup yang lebih baik  ”
+                    DoNation merupakan website yang memfasilitasi serta menyalurkan donasi melalui 3 kategori program yang ada yaitu Kemanusiaan, Pendidikan, dan Infrastruktur
                 </p>
-            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
-                <h3>Misi</h3>
+                <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
+                    <h3>Visi</h3>
+                </div>
+                    <p class="fst-">
+                        “Menjadi website donasi yang aktif membantu meringankan penderitaan sesama yang membutuhkan, dalam bidang Kemanusiaan, Pendidikan, dan Infrastruktur untuk mencapai dan mewujudkan kualitas hidup yang lebih baik  ”
+                    </p>
+                <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
+                    <h3>Misi</h3>
+                </div>
+                <ul>
+                    <li><i class="ri-check-double-line"></i> Membangun kesadaran masyarakat Indonesia untuk peduli kepada sesama</li>
+                    <li><i class="ri-check-double-line"></i> Menciptakan sarana donasi yang aman dan terpercaya </li>
+                    <li><i class="ri-check-double-line"></i> Meringankan beban masyarakat Indonesia yang mengalami musibah </li>
+                </ul>
             </div>
-            <ul>
-                <li><i class="ri-check-double-line"></i> Membangun kesadaran masyarakat Indonesia untuk peduli kepada sesama</li>
-                <li><i class="ri-check-double-line"></i> Menciptakan sarana donasi yang aman dan terpercaya </li>
-                <li><i class="ri-check-double-line"></i> Meringankan beban masyarakat Indonesia yang mengalami musibah </li>
-              </ul>
-          </div>
-        </div>
+            </div>
 
-      </div>
-    </section>
+        </div>
+        </section>
     <!-- End About Section -->
 
     <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients" style="margin: 55px 0 0 0">
-      <div class="container" data-aos="zoom-in">
+        <section id="clients" class="clients" style="margin: 55px 0 0 0">
+        <div class="container" data-aos="zoom-in">
 
-        <div class="clients-slider swiper">
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
-          </div>
-          <div class="swiper-pagination"></div>
+            <div class="clients-slider swiper">
+            <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            </div>
+
         </div>
-
-      </div>
-    </section>
+        </section>
     <!-- End Clients Section -->
 
 
 
     <!-- ======= Services Section ======= -->
-    <section id="berita" class="services" style="background-color: rgb(227, 236, 244)">
-      <div class="container" data-aos="fade-up">
+        <section id="berita" class="services" style="background-color: rgb(227, 236, 244)">
+        <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
-          <p>Berita</p>
-        </div>
-
-        <div class="slider">
-            <input type="radio" name="toggle" id="btn-1" checked>
-            <input type="radio" name="toggle" id="btn-2">
-            <input type="radio" name="toggle" id="btn-3">
-
-            <div class="slider-controls">
-              <label for="btn-1"></label>
-              <label for="btn-2"></label>
-              <label for="btn-3"></label>
+            <div class="section-title">
+            <p>Berita</p>
             </div>
 
-            <ul class="slides">
-              <li class="slide">
-                <div class="slide-content">
-                  <h2 class="slide-title">Wilayah Sarongge hingga Ciherang Belum Terjamah Bantuan Gempa Cianjur</h2>
-                  <br>
-                  <p class="slide-text">
-                    Warga Cianjur, Jawa Barat, Alfa mengatakan bahwa wilayah utara Kota Cianjur hingga kini masih luput dari perhatian pemerintah pasca bencana gempa yang terjadi pada Senin (21/11).
+            <div class="slider">
+                <input type="radio" name="toggle" id="btn-1" checked>
+                <input type="radio" name="toggle" id="btn-2">
+                <input type="radio" name="toggle" id="btn-3">
 
-                    Alfa menyebut bantuan masih terfokus di wilayah Cianjur kota, sementara wilayah bagian utara seperti di Ciherang hingga Sarongge masih kekurangan bantuan logistik, obat-obatan, dan makanan.
-                  </p>
-                  <br>
-                  <a href="#" class="slide-link">Selengkapnya</a>
+                <div class="slider-controls">
+                <label for="btn-1"></label>
+                <label for="btn-2"></label>
+                <label for="btn-3"></label>
                 </div>
-                <p class="slide-image">
-                  <img src="assets/img/gempa.jpeg" alt="stuff" width="400" height="320">
-                </p>
-              </li>
-              <li class="slide">
-                <div class="slide-content">
-                  <h2 class="slide-title">Wak Abu, Lansia Sebatang Kara Luput dari Perhatian Pemerintah</h2>
-                  <br>
-                  <br>
 
-                  <p class="slide-text">Seorang lansia di Dusun Tani Jaya, Gampong Birem Bayeun, Kecamatan Birem Bayeun, Aceh Timur, Abu Bakar (70) luput dari perhatian Pemerintah.
+                <ul class="slides">
+                <li class="slide">
+                    <div class="slide-content">
+                    <h2 class="slide-title">Wilayah Sarongge hingga Ciherang Belum Terjamah Bantuan Gempa Cianjur</h2>
+                    <br>
+                    <p class="slide-text">
+                        Warga Cianjur, Jawa Barat, Alfa mengatakan bahwa wilayah utara Kota Cianjur hingga kini masih luput dari perhatian pemerintah pasca bencana gempa yang terjadi pada Senin (21/11).
 
-                    Amatan Wartawan lansia di Birem Bayeun yang sering di sapa wak Abu Bakar itu tinggal di rumah miliknya di sebuah kebun sawit.
+                        Alfa menyebut bantuan masih terfokus di wilayah Cianjur kota, sementara wilayah bagian utara seperti di Ciherang hingga Sarongge masih kekurangan bantuan logistik, obat-obatan, dan makanan.
                     </p>
                     <br>
+                    <a href="#" class="slide-link">Selengkapnya</a>
+                    </div>
+                    <p class="slide-image">
+                    <img src="assets/img/gempa.jpeg" alt="stuff" width="400" height="320">
+                    </p>
+                </li>
+                <li class="slide">
+                    <div class="slide-content">
+                    <h2 class="slide-title">Wak Abu, Lansia Sebatang Kara Luput dari Perhatian Pemerintah</h2>
                     <br>
-                  <a href="#" class="slide-link">Selengkapnya</a>
-                </div>
-                <p class="slide-image">
-                  <img src="assets/img/abu.jpg"alt="stuff" width="320" height="240">
-                </p>
-              </li>
-              <li class="slide">
-                <div class="slide-content">
-                  <h2 class="slide-title">Tiada Angin, Hujan, dan Retakan, Atap Sekolah Tiba-Tiba Ambruk</h2>
-                  <br>
-                  <p class="slide-text">Peristiwa atap sekolah ambruk kembali terjadi. Atap tiga ruangan kelas di sekolah dasar negeri (SDN) Gugut 1, Kabupaten Jember, Jawa Timur, tiba-tiba ambruk sebelum kegiatan belajar dan mengajar dimulai.
+                    <br>
 
-                    Ketika itu, penjaga sekolah membuka pintu ruang kelas 4. Tiba-tiba, atap ruang kelas ambruk hampir bersamaan dengan atap ruangan kelas 5 dan kelas 6.</p>
+                    <p class="slide-text">Seorang lansia di Dusun Tani Jaya, Gampong Birem Bayeun, Kecamatan Birem Bayeun, Aceh Timur, Abu Bakar (70) luput dari perhatian Pemerintah.
+
+                        Amatan Wartawan lansia di Birem Bayeun yang sering di sapa wak Abu Bakar itu tinggal di rumah miliknya di sebuah kebun sawit.
+                        </p>
+                        <br>
+                        <br>
+                    <a href="#" class="slide-link">Selengkapnya</a>
+                    </div>
+                    <p class="slide-image">
+                    <img src="assets/img/abu.jpg"alt="stuff" width="320" height="240">
+                    </p>
+                </li>
+                <li class="slide">
+                    <div class="slide-content">
+                    <h2 class="slide-title">Tiada Angin, Hujan, dan Retakan, Atap Sekolah Tiba-Tiba Ambruk</h2>
                     <br>
-                  <a href="#" class="slide-link">Selengkapnya</a>
-                </div>
-                <p class="slide-image">
-                  <img src="assets/img/sd.jpg" alt="stuff" width="320" height="240">
-                </p>
-              </li>
-            </ul>
+                    <p class="slide-text">Peristiwa atap sekolah ambruk kembali terjadi. Atap tiga ruangan kelas di sekolah dasar negeri (SDN) Gugut 1, Kabupaten Jember, Jawa Timur, tiba-tiba ambruk sebelum kegiatan belajar dan mengajar dimulai.
+
+                        Ketika itu, penjaga sekolah membuka pintu ruang kelas 4. Tiba-tiba, atap ruang kelas ambruk hampir bersamaan dengan atap ruangan kelas 5 dan kelas 6.</p>
+                        <br>
+                    <a href="#" class="slide-link">Selengkapnya</a>
+                    </div>
+                    <p class="slide-image">
+                    <img src="assets/img/sd.jpg" alt="stuff" width="320" height="240">
+                    </p>
+                </li>
+                </ul>
+            </div>
         </div>
-      </div>
-    </section>
+        </section>
     <!-- End Services Section -->
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
+    <section id="donasi" class="portfolio">
         <div class="container" data-aos="fade-up">
             <div class="section-title">
                 <h2>Donasi</h2>
                 <p>Ulurkan tanganmu dan bantulah mereka</p>
-            </div>
-
-            <div class="button-create d-flex justify-content-center mb-5">
-                <a class="btn btn-light btn-lg text-white" style="background-color: #4B6587" href="">Buat Progam Donasi</a>
             </div>
 
             <div class="row" data-aos="fade-up" data-aos-delay="100">
@@ -231,7 +229,7 @@
                 <div class="col-md-6 d-md-flex align-items-md-stretch">
                   <div class="count-box">
                     <i class="bi bi-house-heart"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="65" data-purecounter-duration="2" class="purecounter"></span>
+                    <span data-purecounter-start="0" data-purecounter-end="{{ $program->count() }}" data-purecounter-duration="2" class="purecounter"></span>
                     <p><strong>Semua Program</strong></p>
                   </div>
                 </div>

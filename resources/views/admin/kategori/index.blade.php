@@ -55,7 +55,7 @@
                                     </td>
                                     <td> {{ $kat->slug }} </td>
                                     <td>{{ $kat->user->name }}</td>
-                                    <td> {{ $kat->created_at }}</td>
+                                    <td> {{ \Carbon\Carbon::parse($kat->created_at)->translatedFormat('l, d F Y') }}</td>
                                     <td> <a class="btn btn-primary" style="margin-right: 5px; border-radius: 5px; background-color: rgb(50, 45, 134); padding: 12px 27px 12px 27px" href="/dashboard/daftarprogram/{{ $kat->slug }}">Detail</a> </td>
                                     {{-- <td> {{ $kat->updated_at }}</td> --}}
                                     <td>

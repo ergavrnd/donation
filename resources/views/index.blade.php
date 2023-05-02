@@ -22,7 +22,7 @@
                                 </a>
                             </div>
                             <div class="col-lg-3 col-md-12">
-                                <a class="text-white" href="#">
+                                <a class="text-white" href="/galangdonasi">
                                     <div class="icon-box">
                                         <i class="ri-home-heart-line"></i>
                                         <h3>Program</h3>

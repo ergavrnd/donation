@@ -59,6 +59,8 @@ Route::post('/ubahpassword', [ChangePasswordController::class, 'store'])->middle
 
 Route::get('/programdonasi/{slug}', [ProgramDonasiController::class, 'index'])->middleware('auth');
 Route::get('/donasiDoNation', [ProgramDonasiController::class, 'all'])->middleware('auth');
+Route::get('/galangdonasi', [ProgramDonasiController::class, 'createdonasi'])->middleware('auth');
+Route::post('/galangdonasi', [ProgramDonasiController::class, 'store'])->middleware('auth');
 
 
 Route::get('/listprogram', function () {

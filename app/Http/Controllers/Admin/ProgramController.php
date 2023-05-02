@@ -62,7 +62,7 @@ class ProgramController extends Controller
 
     public function pendingprogram(){
         return view('admin.pendingprogram', [
-            "program" => Program::where('status', 1)->get()
+            "program" => Program::where('status', 1)->paginate(10)
         ]);
     }
 

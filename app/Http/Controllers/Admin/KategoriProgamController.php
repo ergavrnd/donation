@@ -65,6 +65,10 @@ class KategoriProgamController extends Controller
         $id=request('id');
         $swap = KategoriProgam::where('id', $id)->first();
         KategoriProgam::destroy($id);
+        $program = Program::where('id_kategori', $id)->get();
+        foreach($program as $prog){
+            Program::destroy($prog->id);
+        }
         return redirect()->back()->with('success', "Kategori program: $swap->nama berhasil dihapus");
     }
 

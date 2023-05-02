@@ -28,6 +28,29 @@
   <!-- Template Main CSS File -->
   <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 
+  {{-- CSS form --}}
+  <link href="http://fonts.googleapis.com/css?family=Playfair+Display:900" rel="stylesheet" type="text/css" />
+  <link href="http://fonts.googleapis.com/css?family=Alice:400,700" rel="stylesheet" type="text/css" />
+  <link type="text/css" rel="stylesheet" href="../../form/css/style.css" />
+
+  <style>
+    input[type=file]::file-selector-button {
+        margin-top: -1px;
+        border: none;
+        background: #91775B;
+        padding: 10px 11px 10px 11px;
+        margin-left: -15px;
+        border-radius: 10px;/
+        color: #ffffff;
+        cursor: pointer;
+        transition: background .2s ease-in-out;
+    }
+    input[type=file]::file-selector-button:hover {
+    background: #0d45a5;
+    }
+</style>
+
+
   <!-- =======================================================
   * Template Name: Gp - v4.10.0
   * Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/

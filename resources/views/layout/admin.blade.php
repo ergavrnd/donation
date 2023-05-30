@@ -32,7 +32,7 @@
             <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
                 <span class="mdi mdi-menu"></span>
             </button>
-            <div class="search-field d-none d-md-block">
+            {{-- <div class="search-field d-none d-md-block">
                 <form class="d-flex align-items-center h-100" action="#">
                 <div class="input-group">
                     <div class="input-group-prepend bg-transparent">
@@ -41,9 +41,9 @@
                     <input type="text" class="form-control bg-transparent border-0" placeholder="Search projects">
                 </div>
                 </form>
-            </div>
+            </div> --}}
             <ul class="navbar-nav navbar-nav-right">
-                <li class="nav-item nav-profile dropdown">
+                {{-- <li class="nav-item nav-profile dropdown">
                     <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                         <div class="nav-profile-img">
                         <img src="../../admin/images/faces/face1.jpg" alt="image">
@@ -60,13 +60,13 @@
                         <a class="dropdown-item" href="#">
                         <i class="mdi mdi-logout me-2 text-primary"></i> Signout </a>
                     </div>
-                </li>
+                </li> --}}
                 <li class="nav-item d-none d-lg-block full-screen-link">
                 <a class="nav-link">
                     <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
                 </a>
                 </li>
-                <li class="nav-item dropdown">
+                {{-- <li class="nav-item dropdown">
                 <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="mdi mdi-email-outline"></i>
                     <span class="count-symbol bg-warning"></span>
@@ -106,8 +106,8 @@
                     <div class="dropdown-divider"></div>
                     <h6 class="p-3 mb-0 text-center">4 new messages</h6>
                 </div>
-                </li>
-                <li class="nav-item dropdown">
+                </li> --}}
+                {{-- <li class="nav-item dropdown">
                 <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
                     <i class="mdi mdi-bell-outline"></i>
                     <span class="count-symbol bg-danger"></span>
@@ -153,17 +153,17 @@
                     <div class="dropdown-divider"></div>
                     <h6 class="p-3 mb-0 text-center">See all notifications</h6>
                 </div>
-                </li>
-                <li class="nav-item nav-logout d-none d-lg-block">
+                </li> --}}
+                {{-- <li class="nav-item nav-logout d-none d-lg-block">
                 <a class="nav-link" href="#">
                     <i class="mdi mdi-power"></i>
                 </a>
-                </li>
-                <li class="nav-item nav-settings d-none d-lg-block">
+                </li> --}}
+                {{-- <li class="nav-item nav-settings d-none d-lg-block">
                 <a class="nav-link" href="#">
                     <i class="mdi mdi-format-line-spacing"></i>
                 </a>
-                </li>
+                </li> --}}
             </ul>
             <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
                 <span class="mdi mdi-menu"></span>
@@ -203,13 +203,14 @@
                     </a>
                     <div class="collapse" id="ui-basic">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="/dashboard/user">User</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="/dashboard/user">Pengguna</a></li>
                             <li class="nav-item"> <a class="nav-link" href="/dashboard/kategoriprogram">Kategori Program</a></li>
                             <li class="nav-item"> <a class="nav-link" href="/dashboard/program">Program Donasi</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="/dashboard/program">Berita</a></li>
                         </ul>
                     </div>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link" data-bs-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
                         <span class="menu-title">Transaksi</span>
                         <i class="menu-arrow"></i>
@@ -224,7 +225,7 @@
                         <li class="nav-item"> <a class="nav-link" href="../../pages/samples/error-500.html"> 500 </a></li>
                         </ul>
                     </div>
-                </li>
+                </li> --}}
             </ul>
             </nav>
             <!-- partial -->

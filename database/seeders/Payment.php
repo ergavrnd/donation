@@ -2,11 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\KategoriProgam;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class KategoriProgamSeeder extends Seeder
+class Payment extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,9 +14,6 @@ class KategoriProgamSeeder extends Seeder
      */
     public function run()
     {
-       KategoriProgam::create([
-        'nama'=>'Sosial',
-        'slug'=>'sosial',
-       ]);
+        //
     }
 }

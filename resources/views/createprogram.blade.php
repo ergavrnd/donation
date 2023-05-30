@@ -42,8 +42,8 @@
 					<div class="booking-form">
 						<div class="booking-bg">
 							<div class="form-header">
-								<h2>Make your reservation</h2>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate laboriosam numquam at</p>
+								<h2>Galang Donasi</h2>
+								<p>Bentuk kepedulian kepada saudara kita yang membutuhkan.</p>
 							</div>
 						</div>
 						<form action="galangdonasi" method="POST" enctype="multipart/form-data">
@@ -53,7 +53,7 @@
 								<div class="col-md-6">
 									<div class="form-group">
 										<span class="form-label">Nama Program</span>
-										<input class="form-control @error('nama') is-invalid @enderror" id="nama" name="nama" type="text" placeholder="Kalikepiting berduka" required value="{{ old('nama') }}">
+										<input class="form-control @error('nama') is-invalid @enderror" id="nama" name="nama" type="text" placeholder="Nama Program Anda" required value="{{ old('nama') }}">
 									</div>
                                     @error('nama')
                                         <div class="invalid-feedback">
@@ -110,7 +110,7 @@
 							<div class="col-md-12">
                                 <div class="form-group">
                                     <span class="form-label">Deskripsi program</span>
-                                    <input class="form-control @error('deskripsi') is-invalid @enderror" type="text"  name="deskripsi" id="deskripsi" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit." required value="{{ old('deskripsi') }}">
+                                    <input class="form-control @error('deskripsi') is-invalid @enderror" type="text"  name="deskripsi" id="deskripsi" placeholder="Tulis deskripsi program disini." required value="{{ old('deskripsi') }}">
                                 </div>
                                 @error('deskripsi')
                                     <div class="invalid-feedback">
@@ -127,7 +127,7 @@
                             </div>
 
 							<div class="form-btn">
-								<button class="submit-btn" type="submit">Create Program</button>
+								<button class="submit-btn" type="submit">Tambahkan Program</button>
 							</div>
 						</form>
 					</div>

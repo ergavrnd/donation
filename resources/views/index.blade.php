@@ -25,7 +25,7 @@
                                 <a class="text-white" href="/galangdonasi">
                                     <div class="icon-box">
                                         <i class="ri-home-heart-line"></i>
-                                        <h3>Program</h3>
+                                        <h3>Galang Dana</h3>
                                     </div>
                                 </a>
                             </div>
@@ -174,7 +174,7 @@
         <div class="container" data-aos="fade-up">
             <div class="section-title">
                 <h2>Donasi</h2>
-                <p>Ulurkan tanganmu dan bantulah mereka</p>
+                <p>Ulurkan tanganmu dan bantu mereka</p>
             </div>
 
             <div class="row" data-aos="fade-up" data-aos-delay="100">
@@ -194,15 +194,24 @@
             <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
                 @foreach ($program as $prog)
+                {{-- @dd($prog) --}}
                     <div class="col-lg-4 col-md-6 portfolio-item {{ $prog->kategori->slug }}">
                         <div class="portfolio-wrap">
                             <img src="{{ asset('storage/'.$prog->gambar) }}" class="img-fluid" style="height: 312px" alt="">
                             <div class="portfolio-info">
                                 <h4>{{ $prog->nama }}</h4>
                                 <p>{{ $prog->deskripsi }}</p>
+                                <div class="bg w-100 rounded" style="background-color: rgba(167, 166, 166, 0.496)">
+                                    <div class="rounded progress-bar bg-warning progress-bar-striped"
+                                        style="width: {{ ($prog->danaskrg/$prog->targetdana)*100 }}%;">
+                                        <small class="ms-2">Rp{{ number_format($prog->danaskrg,'2',',','.') }}</small>
+                                    </div>
+                                </div>
                                 <div class="portfolio-links">
-                                <a href="{{ asset('storage/'.$prog->gambar) }}" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-photo-album"></i></a>
-                                <a href="/programdonasi/{{ $prog->slug }}" title="More Details"><i class="bx bx-link"></i></a>
+                                {{-- <a href="{{ asset('storage/'.$prog->gambar) }}" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-photo-album"></i></a> --}}
+                                {{-- <a href="/programdonasi/{{ $prog->slug }}" title="More Details"><i class="bx bx-link"></i></a> --}}
+                                <div><a href="/programdonasi/{{ $prog->slug }}" title="More Details"><h6>Selengkapnya</h6></a>
+                                </div>
                                 </div>
                             </div>
                         </div>
@@ -210,6 +219,13 @@
                 @endforeach
 
             </div>
+
+
+
+              </div>
+
+
+
 
         </div>
     </section>

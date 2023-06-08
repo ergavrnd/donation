@@ -23,31 +23,30 @@
                                 <img src="https://img.icons8.com/color/48/000000/maestro.png"/>
                             </div> --}}
                             </div>
-                            <form action="/checkout" method="POST">
-                                @csrf
-                                <span>Masukkan Nominal</span>
+
+                                <span>Nominal Donasi</span>
                                 <input class="formpay @error('nominal') is-invalid @enderror" name="nominal" type="text" placeholder="Rp1.000.000,00"
                                 id="txtExampleBoxOne" onkeypress="return number(event )" onBlur="formatCurrency(this, 'Rp ', 'blur');" onkeyup="formatCurrency(this, 'Rp ');" data-inputmask="'alias': 'numeric', 'autoGroup' :true, 'digitsOptional':false, 'removeMaskOnSubmit' : true, 'autoUnmask' : true"required value="{{ old('nominal') }}">
 
 
                                 <div class="donatur">
                                     <span>Nama Donatur</span>
-                                    <input class="formpay @error('namaDonatur') is-invalid @enderror" type="text"  name="namaDonatur" id="namaDonatur" required value="{{ old('namaDonatur') }}">
+                                    {{ $payment->namaDonatur }}
                                 </div>
-                                <span>Ingin donasi sebagai anonim?</span>
+                                {{-- <span>Ingin donasi sebagai anonim?</span>
                                 <div class="d-flex">
                                     <label for="Ya" class="me-5">
-                                        <input id="Ya" class="mb-2" type="radio" name="choice" value="Ya">
+                                        <input id="Ya" class="mb-2" type="radio" name="choice" value="{{ $payment }}">
                                         <p class="text-center">Ya</p>
                                     </label>
                                     <label for="Tidak">
                                         <input id="Tidak" class="mb-2" type="radio" name="choice" value="Tidak">
                                         <p class="text-center">Tidak</p>
                                     </label>
-                                </div>
+                                </div> --}}
                                 <div class="donatur">
                                     <span>Doa yang Ingin Disampaikan </span>
-                                    <input class="formpay @error('doa') is-invalid @enderror" type="text"  name="doa" id="doa" required value="{{ old('doa') }}">
+                                    <input class="formpay @error('doa') is-invalid @enderror" type="text"  name="doa" id="doa" required value="{{ $payment->doa}}" disabled>
                                 </div>
 
                             {{-- </form> --}}
@@ -55,17 +54,17 @@
                     </div>
                     <div class="col-md-5">
                         <div class="right border">
-                            <div class="textborder">
+                            {{-- <div class="textborder">
                                 <div class="header">Membantu program :</div>
                                 <p>{{ $program->nama }}</p>
                                 <div class="row item">
                                     <div class="col-4 align-self-center"><img class="img-fluid"
                                             src="{{ asset('storage/' . $program->gambar) }}"></div>
                                 </div>
-                            </div>
+                            </div> --}}
                             <hr>
-                            <button class="btn" type="submit">Donasi</button>
-                        </form>
+                            <button class="btn" type="submit" id="pay-button">Donasi</button>
+
                         </div>
                     </div>
                 </div>
@@ -160,5 +159,36 @@
                 inputPhone.disabled = false;
             }
         }
+
+        <script type="text/javascript">
+        // For example trigger on button clicked, or any time you need
+        var payButton = document.getElementById('pay-button');
+        payButton.addEventListener('click', function () {
+            // Trigger snap popup. @TODO: Replace TRANSACTION_TOKEN_HERE with your transaction token
+            window.snap.pay('{{ $snapToken }}', {
+                onSuccess: function (result) {
+                    /* You may add your own implementation here */
+                    //   alert("payment success!");
+                    window.location.href = '/dashboard/user'
+                    console.log(result);
+                },
+                onPending: function (result) {
+                    /* You may add your own implementation here */
+                    alert("wating your payment!");
+                    console.log(result);
+                },
+                onError: function (result) {
+                    /* You may add your own implementation here */
+                    alert("payment failed!");
+                    console.log(result);
+                },
+                onClose: function () {
+                    /* You may add your own implementation here */
+                    alert('you closed the popup without finishing the payment');
+                }
+            })
+        });
+
+    </script>
     </script>
 @endsection

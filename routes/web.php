@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\Admin\ProgramController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProgramDonasiController;
 use App\Http\Controllers\ChangePasswordController;
 use App\Http\Controllers\Auth\ResetPasswordController;
@@ -61,8 +62,14 @@ Route::get('/programdonasi/{slug}', [ProgramDonasiController::class, 'index'])->
 Route::get('/donasiDoNation', [ProgramDonasiController::class, 'all'])->middleware('auth');
 Route::get('/galangdonasi', [ProgramDonasiController::class, 'createdonasi'])->middleware('auth');
 Route::post('/galangdonasi', [ProgramDonasiController::class, 'store'])->middleware('auth');
-Route::get('/payment/{program}', [ProgramDonasiController::class, 'payment'])->middleware('auth');
-Route::post('/payment/{program}', [ProgramDonasiController::class, 'payment'])->middleware('auth');
+
+Route::get('/payment/{id}', [ProgramDonasiController::class, 'payment'])->middleware('auth');
+Route::post('/checkout', [ProgramDonasiController::class, 'checkout'])->middleware('auth');
+
+
+Route::get('/detpayment', function () {
+    return view('user.detail-payment');
+});
 
 
 Route::get('/listprogram', function () {

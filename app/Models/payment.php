@@ -20,4 +20,8 @@ class payment extends Model
     public function user(){
         return $this->belongsTo(User::class, 'id_user');
     }
+
+    public function program(){
+        return $this->belongsTo(Program::class, 'id_program');
+    }
 }

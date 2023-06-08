@@ -801,7 +801,7 @@ section {
   text-transform: uppercase;
   color: #444444;
   margin-bottom: 5px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
   border-radius: 3px;
 }
 
@@ -838,7 +838,7 @@ section {
 
 .portfolio .portfolio-wrap img {
   transition: all ease-in-out 0.3s;
-  /* width:200px; */
+  width:200px;
 }
 
 .portfolio .portfolio-wrap .portfolio-info {

@@ -16,7 +16,8 @@ return new class extends Migration
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreignId("id_program");
+            // $table->foreignId("id_program");
+            // $table->foreignId("id_user");
             $table->string('namaDonatur');
             $table->bigInteger('nominal');
             $table->string('doa');

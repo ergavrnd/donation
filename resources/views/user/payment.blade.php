@@ -1,132 +1,112 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>DoNation</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Gp - v4.10.0
-  * Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-
-  <section style="background-color: #eee;">
-    <div class="container py-5">
-      <div class="row d-flex justify-content-center">
-        <div class="col-md-8 col-lg-6 col-xl-4">
-          <div class="card rounded-3">
-            <div class="card-body mx-1 my-2">
-              <div class="d-flex align-items-center">
-                <div>
-                  {{-- <i class="fab fa-cc-visa fa-4x text-black pe-3"></i> --}}
-                </div>
-                <div>
-                  {{-- <p class="d-flex flex-column mb-0">
-                    <b>Martina Thomas</b><span class="small text-muted">**** 8880</span>
-                  </p> --}}
-                </div>
-              </div>
-
-              <div class="pt-3">
-                <div class="d-flex flex-row pb-3">
-                  <div class="rounded border border-bs-gray-500 border-2 d-flex w-100 p-3 align-items-center"
-                    {{-- style="background-color: rgba(18, 101, 241, 0.07);" --}}
-                    >
-                    <div class="d-flex align-items-center pe-3">
-                      <input class="form-check-input" type="radio" name="radioNoLabelX" id="radioNoLabel11"
-                        value="" aria-label="..." checked />
-                    </div>
-                    <div class="d-flex flex-column">
-                      {{-- <p class="mb-1 small text-primary">Total amount due</p> --}}
-                      <h6 class="mb-0 text-primary">Rp20.000</h6>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="pt-3">
-                    <div class="d-flex flex-row pb-3">
-                      <div class="rounded border border-bs-gray-500 border-2 d-flex w-100 p-3 align-items-center"
-                        {{-- style="background-color: rgba(18, 101, 241, 0.07);" --}}
-                        >
-                        <div class="d-flex align-items-center pe-3">
-                          <input class="form-check-input" type="radio" name="radioNoLabelX" id="radioNoLabel11"
-                            value="" aria-label="..." checked />
-                        </div>
-                        <div class="d-flex flex-column">
-                          {{-- <p class="mb-1 small text-primary">Total amount due</p> --}}
-                          <h6 class="mb-0 text-primary">Rp50.000</h6>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="pt-3">
-                        <div class="d-flex flex-row pb-3">
-                          <div class="rounded border border-bs-gray-500 border-2 d-flex w-100 p-3 align-items-center"
-                            {{-- style="background-color: rgba(18, 101, 241, 0.07);" --}}
-                            >
-                            <div class="d-flex align-items-center pe-3">
-                              <input class="form-check-input" type="radio" name="radioNoLabelX" id="radioNoLabel11"
-                                value="" aria-label="..." checked />
-                            </div>
-                            <div class="d-flex flex-column">
-                              {{-- <p class="mb-1 small text-primary">Total amount due</p> --}}
-                              <h6 class="mb-0 text-primary">Rp100.000</h6>
-                            </div>
-                          </div>
-                        </div>
-
-                <div class="d-flex flex-row pb-3">
-                  <div class="rounded border d-flex w-100 px-3 py-2 align-items-center">
-                    <div class="d-flex align-items-center pe-3">
-                      <input class="form-check-input" type="radio" name="radioNoLabelX" id="radioNoLabel22"
-                        value="" aria-label="..." />
-                    </div>
-                    <div class="d-flex flex-column py-1">
-                      <p class="mb-1 small text-primary">Other amount</p>
-                      <div class="d-flex flex-row align-items-center">
-                        <h6 class="mb-0 text-primary pe-1">$</h6>
-                        <input type="text" class="form-control form-control-sm" id="numberExample"
-                          style="width: 55px;" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="d-flex justify-content-between align-items-center pb-1">
-                <button type="button" class="btn btn-primary btn-lg align-items-center">Pay amount</button>
-              </div>
+@extends('layout.main')
+@section('babayo')
+    <section id="hero" class="d-flex align-items-center justify-content-center">
+        <div class="sliderpay">
+            <div class="card-top border-bottom text-center">
+                <a href="{{ url()->previous() }}"> Kembali</a>
+                <span id="logo">BBBootstrap.com</span>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+            <div class="card-body">
+                <div class="row upper">
+                    {{-- <span><i class="fa fa-check-circle-o"></i> Shopping bag</span>
+                <span><i class="fa fa-check-circle-o"></i> Order details</span>
+                <span id="payment"><span id="three">3</span>Payment</span> --}}
+                </div>
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="left border">
+                            <div class="row">
+                                {{-- <span class="header">Masukkan Nominal Donasi</span> --}}
+                                {{-- <div class="icons">
+                                <img src="https://img.icons8.com/color/48/000000/visa.png"/>
+                                <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png"/>
+                                <img src="https://img.icons8.com/color/48/000000/maestro.png"/>
+                            </div> --}}
+                            </div>
+                            <form>
+                                @csrf
+                                <span>Masukkan Nominal</span>
+                                <input class="formpay" placeholder="Rp20000">
+                                {{-- <span>Nama Donatur  </span>
+                            <input class="mb-2"> --}}
+                                {{-- <input type="checkbox" id="save_card" class="align-left">
+                            <label class="mb-3" for="save_card">Tampilkan Sebagai Anonim</label> --}}
 
-</head>
-</html>
+                                <div class="donatur">
+                                    <span>Nama Donatur</span>
+                                    {{-- <input class="formpay" type="email" id="namaDonatur" name="namaDonatur" /> --}}
+                                    <input class="formpay @error('namaDonatur') is-invalid @enderror" type="text"  name="namaDonatur" id="namaDonatur" required value="{{ old('namaDonatur') }}">
+                                </div>
+                                <span>Ingin donasi sebagai anonim?</span>
+                                <div class="d-flex">
+                                    <label for="Ya" class="me-5">
+                                        <input id="Ya" class="mb-2" type="radio" name="choice" value="Ya">
+                                        <p class="text-center">Ya</p>
+                                    </label>
+                                    <label for="Tidak">
+                                        <input id="Tidak" class="mb-2" type="radio" name="choice" value="Tidak">
+                                        <p class="text-center">Tidak</p>
+                                    </label>
+                                </div>
+                                {{-- <input type="checkbox" id="namaDonatur" name="cek_nama" onchange="checkDisable()" />
+                                Sebagai Anonim --}}
+                                <div class="donatur">
+                                    <span>Doa yang Ingin Disampaikan </span>
+                                    {{-- <input class="formpay"> --}}
+                                    <input class="formpay @error('doa') is-invalid @enderror" type="text"  name="doa" id="doa" required value="{{ old('doa') }}">
+                                    {{-- <div class="col-4"><span>Doa yang Ingin Disampaikan</span>
+                                    <input placeholder="YY/MM">
+                                </div> --}}
+                                    {{-- <div class="col-4"><span>CVV:</span>
+                                    <input id="cvv">
+                                </div> --}}
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="right border">
+                            <div class="textborder">
+                                <div class="header">Membantu program :</div>
+                                <p>{{ $program->nama }}</p>
+                                <div class="row item">
+                                    <div class="col-4 align-self-center"><img class="img-fluid"
+                                            src="{{ asset('storage/' . $program->gambar) }}"></div>
+                                </div>
+                            </div>
+                            <hr>
+                            <button class="btn">Donasi</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        function checkDisable() {
+            var checkEmail = document.getElementById('check_email');
+            var checkPhone = document.getElementById('check_phone');
+            var inputEmail = document.getElementById('ref_email');
+            var inputPhone = document.getElementById('form-field-phone');
+            if (checkEmail.checked) {
+                inputPhone.disabled = true;
+            }
+            if (checkPhone.checked) {
+                inputEmail.disabled = true;
+            }
+            if (checkEmail.checked && checkPhone.checked) {
+                inputEmail.disabled = false;
+                inputPhone.disabled = false;
+            }
+            if (!checkEmail.checked && !checkPhone.checked) {
+                inputEmail.disabled = false;
+                inputPhone.disabled = false;
+            }
+        }
+    </script>
+@endsection

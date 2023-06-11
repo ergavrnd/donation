@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -78,8 +80,8 @@
                         @auth
                             <li class="dropdown"><a href="#"><span>Riwayat</span> <i class="bi bi-chevron-down"></i></a>
                                 <ul>
-                                    <li><a href="">Donasi</a></li>
-                                    <li><a href="">Program</a></li>
+                                    <li><a href="/riwayat">Donasi</a></li>
+                                    <li><a href="/riwayat">Penggalangan Dana</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown"><a href="#"><span>{{ auth()->user()->username }}</span> <i class="bi bi-chevron-down"></i></a>
@@ -97,7 +99,7 @@
                                 </ul>
                             </li>
                         @else
-                            <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
+                            {{-- <li><a class="nav-link scrollto" href="#contact">Kontak</a></li> --}}
                             <li class="dropdown"><a href="#"><span>User</span> <i class="bi bi-chevron-down"></i></a>
                                 <ul>
                                 <li><a href="/login">Masuk</a></li>

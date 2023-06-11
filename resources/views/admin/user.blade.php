@@ -9,12 +9,12 @@
     </div>
 @endif
 <div class="row d-flex justify-content-center">
-    <div class="col-9 grid-margin stretch-card">
+    <div class="col-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
                 <div class="row">
                     <div class="col">
-                        <h4 class="card-title">Jumlah User Webite : {{ $user->count() }}</h4>
+                        <h4 class="card-title">Jumlah Pengguna Terdaftar : {{ $user->count() }}</h4>
                     </div>
                 </div>
 

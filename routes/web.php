@@ -59,17 +59,17 @@ Route::get('/programdonasi/{slug}', [ProgramDonasiController::class, 'index'])->
 Route::get('/donasiDoNation', [ProgramDonasiController::class, 'all'])->middleware('auth');
 Route::get('/galangdonasi', [ProgramDonasiController::class, 'createdonasi'])->middleware('auth');
 Route::post('/galangdonasi', [ProgramDonasiController::class, 'store'])->middleware('auth');
+Route::get('/payment/{program}', [ProgramDonasiController::class, 'payment'])->middleware('auth');
+Route::post('/payment/{program}', [ProgramDonasiController::class, 'payment'])->middleware('auth');
 
 Route::get('/detailblog', [BlogController::class, 'konten'])->middleware('auth');
 
 Route::get('/listprogram', function () {
     return view('user.listprogram');
 });
-Route::get('/detailprogram', function () {
-    return view('user.detailprogram');
-});
-Route::get('/payment', function () {
-    return view('user.payment');
+
+Route::get('/riwayat', function () {
+    return view('user.history');
 });
 
 ///////////////////////////ADMIN//////////////////////////////

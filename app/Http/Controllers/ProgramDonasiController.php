@@ -29,6 +29,14 @@ class ProgramDonasiController extends Controller
         ]);
     }
 
+    public function payment(Request $request, Program $program){
+        // dd($program);
+        return view ('user.payment',[
+            "program" => $program,
+            // "kategori" => KategoriProgam::all()
+        ]);
+    }
+
     public function store (Request $request){
         $validatedData = $request->validate([
             "nama" => 'required|max:255',

@@ -28,7 +28,6 @@
                             <th> No </th>
                             <th> Nama Kategori </th>
                             <th> Slug </th>
-                            <th> Dibuat oleh </th>
                             <th> Dibuat pada </th>
                             <th> Daftar Program </th>
                             <th> Aksi </th>
@@ -54,12 +53,11 @@
                                         <span class="pl-2">{{ $kat->nama }}</span>
                                     </td>
                                     <td> {{ $kat->slug }} </td>
-                                    <td>{{ $kat->user->name }}</td>
                                     <td> {{ \Carbon\Carbon::parse($kat->created_at)->translatedFormat('l, d F Y') }}</td>
                                     <td> <a class="btn btn-primary" style="margin-right: 5px; border-radius: 5px; background-color: rgb(50, 45, 134); padding: 12px 27px 12px 27px" href="/dashboard/daftarprogram/{{ $kat->slug }}">Detail</a> </td>
                                     {{-- <td> {{ $kat->updated_at }}</td> --}}
                                     <td>
-                                        @if (auth()->user()->id == $kat->user->id)
+                                        @if (auth()->user())
                                             <div class="row justify-content-center">
                                                 <div class="col-6">
                                                     <a href="/dashboard/updatekategori/{{ $kat->slug }}" class="btn btn-light" style="margin-right: 5px; border-radius: 5px; background-color: rgb(26, 100, 63); color: white; padding: 12px 27px 12px 27px">Update</a>

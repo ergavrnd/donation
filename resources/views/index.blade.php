@@ -29,9 +29,35 @@
                         </a>
                     </div>
                 </div>
+<<<<<<< HEAD
             @endauth
         </div>
     </section>
+=======
+                <br>
+                    @auth
+                        <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+                            <div class="col-lg-3 col-md-12">
+                                <a class="text-white" href="/donasiDoNation">
+                                    <div class="icon-box">
+                                        <i class="ri-hand-heart-line"></i>
+                                        <h3>Donasi</h3>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-md-12">
+                                <a class="text-white" href="/galangdonasi">
+                                    <div class="icon-box">
+                                        <i class="ri-home-heart-line"></i>
+                                        <h3>Galang Dana</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    @endauth
+                </div>
+        </section>
+>>>>>>> 8d97dbf3262019591a43c06a39d4fcdc9ea135ea
     <!-- End Hero -->
 
     <main id="main">
@@ -105,6 +131,15 @@
                     <div class="swiper-pagination"></div>
                 </div>
 
+<<<<<<< HEAD
+=======
+    <!-- ======= Portfolio Section ======= -->
+    <section id="donasi" class="portfolio">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>Donasi</h2>
+                <p>Ulurkan tanganmu dan bantu mereka</p>
+>>>>>>> 8d97dbf3262019591a43c06a39d4fcdc9ea135ea
             </div>
         </section>
         <!-- End Clients Section -->
@@ -203,6 +238,7 @@
                     <p>Ulurkan tanganmu dan bantulah mereka</p>
                 </div>
 
+<<<<<<< HEAD
                 <div class="row" data-aos="fade-up" data-aos-delay="100">
                     <div class="col-lg-12 d-flex justify-content-center">
                         <ul id="portfolio-flters">
@@ -232,6 +268,27 @@
                                         <a href="/programdonasi/{{ $prog->slug }}" title="More Details"><i
                                                 class="bx bx-link"></i></a>
                                     </div>
+=======
+                @foreach ($program as $prog)
+                {{-- @dd($prog) --}}
+                    <div class="col-lg-4 col-md-6 portfolio-item {{ $prog->kategori->slug }}">
+                        <div class="portfolio-wrap">
+                            <img src="{{ asset('storage/'.$prog->gambar) }}" class="img-fluid" style="height: 312px" alt="">
+                            <div class="portfolio-info">
+                                <h4>{{ $prog->nama }}</h4>
+                                <p>{{ $prog->deskripsi }}</p>
+                                <div class="bg w-100 rounded" style="background-color: rgba(167, 166, 166, 0.496)">
+                                    <div class="rounded progress-bar bg-warning progress-bar-striped"
+                                        style="width: {{ ($prog->danaskrg/$prog->targetdana)*100 }}%;">
+                                        <small class="ms-2">Rp{{ number_format($prog->danaskrg,'2',',','.') }}</small>
+                                    </div>
+                                </div>
+                                <div class="portfolio-links">
+                                {{-- <a href="{{ asset('storage/'.$prog->gambar) }}" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-photo-album"></i></a> --}}
+                                {{-- <a href="/programdonasi/{{ $prog->slug }}" title="More Details"><i class="bx bx-link"></i></a> --}}
+                                <div><a href="/programdonasi/{{ $prog->slug }}" title="More Details"><h6>Selengkapnya</h6></a>
+                                </div>
+>>>>>>> 8d97dbf3262019591a43c06a39d4fcdc9ea135ea
                                 </div>
                             </div>
                         </div>
@@ -243,9 +300,22 @@
         </section>
         <!-- End Portfolio Section -->
 
+<<<<<<< HEAD
         <!-- ======= Counts Section ======= -->
         <section id="counts" class="counts" style="background-color: rgb(227, 236, 244)">
             <div class="container" data-aos="fade-up">
+=======
+
+
+              </div>
+
+
+
+
+        </div>
+    </section>
+    <!-- End Portfolio Section -->
+>>>>>>> 8d97dbf3262019591a43c06a39d4fcdc9ea135ea
 
                 <div class="row no-gutters">
                     <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start"

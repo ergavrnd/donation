@@ -13,8 +13,13 @@
 }
 
 #booking {
+<<<<<<< HEAD
 	font-family: 'Alice', serif;
 	background: rgb(227, 236, 244);
+=======
+	font-family: "Open Sans", sans-serif;
+	background: rgba(133, 104, 73, 0.33);
+>>>>>>> 8d97dbf3262019591a43c06a39d4fcdc9ea135ea
 }
 
 .booking-form {
@@ -51,8 +56,12 @@
 	right: 0;
 	bottom: 0;
 	top: 0;
+<<<<<<< HEAD
 	/* background: rgba(133, 104, 73, 0.78); */
     background: rgb(57, 72, 103, 0.78);
+=======
+	background: rgb(75 101 135 / 64%);
+>>>>>>> 8d97dbf3262019591a43c06a39d4fcdc9ea135ea
 }
 
 .booking-form>form {
@@ -68,7 +77,7 @@
 }
 
 .booking-form .form-header h2 {
-	font-family: 'Playfair Display', serif;
+	font-family: "Open Sans", sans-serif;
 	margin-top: 0;
 	margin-bottom: 15px;
 	font-weight: 900;
@@ -91,7 +100,7 @@
 	background-color: #fff;
 	height: 45px;
 	padding: 0px 15px;
-	color: #151515;
+	color: #bcbcbc;
 	border: 1px solid #e5e5e5;
 	font-size: 16px;
 	font-weight: 700;
@@ -103,23 +112,23 @@
 }
 
 .booking-form .form-control::-webkit-input-placeholder {
-	color: #7f7d7d;
+	color: #bcbcbc;
 }
 
 .booking-form .form-control:-ms-input-placeholder {
-	color: #7f7d7d;
+	color: #bcbcbc;
 }
 
 .booking-form .form-control::placeholder {
-	color: #7f7d7d;
+	color: #bcbcbc;
 }
 
 .booking-form .form-control:focus {
-	background: #f8f8f8;
+	background: #bcbcbc;
 }
 
 .booking-form input[type="date"].form-control:invalid {
-	color: #7f7d7d;
+	color: #bcbcbc;
 }
 
 .booking-form select.form-control {
@@ -157,7 +166,7 @@
 }
 
 .booking-form .form-label {
-	color: #856849;
+	color: #636363;
 	text-transform: uppercase;
 	line-height: 24px;
 	height: 24px;
@@ -174,7 +183,11 @@
 	display: block;
 	width: 100%;
 	color: #fff;
+<<<<<<< HEAD
 	background-color: #8294C4;
+=======
+	background-color: rgb(54 58 64);
+>>>>>>> 8d97dbf3262019591a43c06a39d4fcdc9ea135ea
 	font-weight: 700;
 	font-size: 18px;
 	border: none;

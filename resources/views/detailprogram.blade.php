@@ -26,6 +26,16 @@
                         <li>Program Donasi : {{ $program->nama }}</li>
                     </ol>
                 </div>
+<<<<<<< HEAD
+=======
+                {{-- <div class="portfolio-description">
+                <h2>Deskripsi program donasi</h2>
+                <p>
+                    {{ $program->deskripsi }}
+                </p>
+                </div> --}}
+            </div>
+>>>>>>> 8d97dbf3262019591a43c06a39d4fcdc9ea135ea
 
             </div>
         </section>
@@ -67,6 +77,7 @@
                     </div>
 
                 </div>
+<<<<<<< HEAD
 
             </div>
         </section>
@@ -107,6 +118,28 @@
                                     style="background-color: #4B6587">Donasi Sekarang</button></a>
                         </div>
                         {{-- <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" style="margin-top:40px" data-aos="fade-right" data-aos-delay="100">
+=======
+                <div class="col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 content" style="margin-top: 3%" data-aos="fade-right" data-aos-delay="100">
+                <h3>#Bantuan {{ $program->kategori->nama }} : {{ $program->nama }}</h3>
+                <p class="small mb-0"><i class="far fa-star fa-lg"></i> <span class="mx-2">|</span> Dibuat oleh
+                    <strong>{{ $program->user->name }}</strong> pada {{ $program->created_at->format('d M Y') }}</p>
+                <div style="margin-top: 40px"> <h4>Rp {{ number_format($program->danaskrg, 2, ',','.') }}</h4> </div>
+                <div style="margin-top: 10px"> <h5>Terkumpul dari Rp {{ number_format($program->targetdana, 2, ',','.') }}</h5> </div>
+                <div class="progress" style="margin-top: 20px">
+                    <div class="progress-bar progress-bar-striped" title="Rp{{ $program->danaskrg }}" style="width: {{ $program->danaskrg/$program->targetdana*100 }}%">Rp{{ number_format($program->danaskrg,'2',',','.') }}</div>
+                </div>
+                    <div class="fst" style="margin-top: 50px"><h5>
+                        {{ $program->deskripsi }}</h5>
+                    </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
+                </div>
+                <div class="parent d-flex justify-content-center" style="margin-top: 60px">
+                    <form method='POST'>
+                    <a href="/payment/{{ $program->id }}"> <button type="button" class="btn btn-light btn-lg text-white" style="background-color: #4B6587">Donasi Sekarang</button></a>
+                    </form>
+                </div>
+                {{-- <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" style="margin-top:40px" data-aos="fade-right" data-aos-delay="100">
+>>>>>>> 8d97dbf3262019591a43c06a39d4fcdc9ea135ea
                     <h6><b>Penggalang Dana :</b></h6>
                 </div>
                 <div style="margin-top: 10px"> <h6>Yayasan Al Ma'ruf</h6> </div> --}}

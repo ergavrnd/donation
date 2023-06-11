@@ -13,12 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('kategori_progams', function (Blueprint $table) {
+        Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            // $table->foreignId("id_user");
-            $table->string('nama');
-            $table->string('slug')->unique();
             $table->timestamps();
+            $table->foreignId("id_program");
+            $table->string('namaDonatur');
+            $table->bigInteger('nominal');
+            $table->string('doa');
+            $table->enum('status', ['Unpaid', 'Paid']);
+            $table->timestamp('waktuBayar');
         });
     }
 
@@ -29,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kategori_progams');
+        Schema::dropIfExists('payments');
     }
 };

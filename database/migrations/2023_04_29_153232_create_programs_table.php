@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('gambar')->nullable();
             $table->bigInteger('targetdana');
             $table->bigInteger('danaskrg')->default(0);
-            $table->integer('status')->default(1);
+            $table->integer('status')->default(0);
             $table->date('deadline');
             $table->timestamps();
         });

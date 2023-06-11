@@ -43,7 +43,7 @@
                                         </div>
                                     </div>
                                     <br>
-                                    <div class="col-sm-8">
+                                    <div class="col-sm-12">
                                         <div class="card-block">
                                             <h1 class="m-b-20 p-b-5 f-w-600" style="font-size: 28px">Profil Donatur</h1>
                                             <hr class="mb-4">

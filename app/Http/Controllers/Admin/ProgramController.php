@@ -72,4 +72,25 @@ class ProgramController extends Controller
         ]);
     }
 
+    public function detailprogram($slug){
+        return view('admin.program.detailprogram', [
+            "program" => Program::where('slug', $slug)->first()
+        ]);
+    }
+
+    public function verifikasi(Request $request){
+        $program = Program::where('id', $request->id)->first();
+        $update['status'] = 2;
+        $program->update($update);
+        return redirect('/dashboard/pendingprogram')->with('success', 'Program donasi berhasil di verifikasi');
+    }
+
+    public function batalkan(Request $request){
+        $program = Program::where('id', $request->id)->first();
+        $update['status'] = 3;
+        $update['pesanbatal'] = $request->pesanbatal;
+        $program->update($update);
+        return redirect('/dashboard/pendingprogram')->with('batalkan', 'Program donasi berhasil dibatalkan');
+    }
+
 }

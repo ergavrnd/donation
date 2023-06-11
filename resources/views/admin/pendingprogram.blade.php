@@ -28,10 +28,10 @@
                             <th> Nama program </th>
                             <th> Kategori program </th>
                             <th> Dibuat oleh </th>
-                            <th> Dana terkumpul </th>
                             <th> Target dana </th>
                             <th> Status program </th>
-                            <th> Tanggal dibuat </th>
+                            <th> Deadline program</th>
+                            <th> Tanggal pengajuan </th>
                         </tr>
                     </thead>
 
@@ -55,21 +55,11 @@
                                 </td>
                                 <td> {{ $prog->kategori->nama }} </td>
                                 <td> {{ $prog->user->name }} </td>
-                                <td> Rp {{ number_format($prog->danaskrg, 2, ',','.') }} </td>
                                 <td> Rp {{ number_format($prog->targetdana, 2, ',','.') }} </td>
                                 <td>
-                                    @if ($prog->status == 1)
-                                        <label class="badge badge-warning">Pending</label>
-                                    @elseif ($prog->status == 2)
-                                        <label class="badge badge-info">Aktif</label>
-                                    @elseif ($prog->status == 3)
-                                        <label class="badge badge-dark">Non Aktif</label>
-                                    @elseif ($prog->status == 4)
-                                        <label class="badge badge-danger">Batal</label>
-                                    @else
-                                        <label class="badge badge-success">Selesai</label>
-                                    @endif
+                                    <a href="/dashboard-detailprogram/{{ $prog->slug }}" style="text-decoration: none" class="btn btn-warning btn-lg">Pending</a>
                                 </td>
+                                <td> {{ \Carbon\Carbon::parse($prog->deadline)->translatedFormat('l, d F Y') }} </td>
                                 <td> {{ \Carbon\Carbon::parse($prog->created_at)->translatedFormat('l, d F Y') }} </td>
                             </tr>
                         @endforeach

@@ -14,7 +14,7 @@
 
 #booking {
 	font-family: 'Alice', serif;
-	background: rgba(133, 104, 73, 0.33);
+	background: rgb(227, 236, 244);
 }
 
 .booking-form {
@@ -51,7 +51,8 @@
 	right: 0;
 	bottom: 0;
 	top: 0;
-	background: rgba(133, 104, 73, 0.78);
+	/* background: rgba(133, 104, 73, 0.78); */
+    background: rgb(57, 72, 103, 0.78);
 }
 
 .booking-form>form {
@@ -173,7 +174,7 @@
 	display: block;
 	width: 100%;
 	color: #fff;
-	background-color: rgba(133, 104, 73, 0.9);
+	background-color: #8294C4;
 	font-weight: 700;
 	font-size: 18px;
 	border: none;

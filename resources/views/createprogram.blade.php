@@ -28,17 +28,6 @@
                         </div>
                     @endif
 
-                    {{-- @if ($errors)
-                        <div class="row justify-content-center">
-                            <div class="alert alert-danger alert-dismissible fade show col-lg-6 text-center d-flex justify-content-center" role="alert">
-                                @foreach ($errors as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                            </div>
-                        </div>
-                    @endif --}}
-
 					<div class="booking-form">
 						<div class="booking-bg">
 							<div class="form-header">

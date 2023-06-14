@@ -32,10 +32,9 @@
                         <img src="{{ asset('storage/'.$prog->gambar) }}" class="img-fluid" style="height: 312px" alt="">
                         <div class="portfolio-info">
                             <h4>{{ $prog->nama }}</h4>
-                            <p>{{ $prog->deskripsi }}</p>
                             <div class="portfolio-links">
                             {{-- <a href="{{ asset('storage/'.$prog->gambar) }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="View Photos"><i class="bx bx-plus"></i></a> --}}
-                            <a href="3" title="More Details"><i class="bx bx-link"></i></a>
+                            <a href="" title="More Details"><i class="bx bx-link"></i></a>
                             </div>
                         </div>
                     </div>

@@ -65,9 +65,9 @@
                                         <label class="badge badge-warning">Pending</label>
                                     @elseif ($prog->status == 2)
                                         <label class="badge badge-info">Aktif</label>
-                                    @elseif ($prog->status == 3)
-                                        <label class="badge badge-dark">Non Aktif</label>
                                     @elseif ($prog->status == 4)
+                                        <label class="badge badge-dark">Non Aktif</label>
+                                    @elseif ($prog->status == 3)
                                         <label class="badge badge-danger">Batal</label>
                                     @else
                                         <label class="badge badge-success">Selesai</label>

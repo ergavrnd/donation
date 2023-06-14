@@ -39,7 +39,7 @@
     input[type=file]::file-selector-button {
         margin-top: -1px;
         border: none;
-        background: #91775B;
+        background: #8294C4;
         padding: 10px 11px 10px 11px;
         margin-left: -15px;
         border-radius: 10px;/

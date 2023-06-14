@@ -11,6 +11,7 @@ use App\Http\Controllers\ProgramDonasiController;
 use App\Http\Controllers\ChangePasswordController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Admin\KategoriProgamController;
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,19 +34,16 @@ Route::get('/donasi', function () {
     return view('donasi');
 });
 
-Route::get('/home', [AuthController::class, 'home'])->middleware('auth');
-
 Route::get('/register', [AuthController::class, 'register'])->middleware('guest');
 Route::post('/register', [AuthController::class, 'store'])->middleware('guest');
 Route::get('/verifikasi', [AuthController::class, 'verifikasi'])->middleware('guest');
 Route::post('/verifikasi', [AuthController::class, 'postverifikasi'])->middleware('guest');
-
 Route::get('/validasi', [AuthController::class, 'indexvalidasi'])->middleware('auth');
 Route::post('/validasi', [AuthController::class, 'validasi'])->middleware('auth');
+Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
 
 Route::get('auth/google', [GoogleController::class, 'redirectToGoogle'])->name('google.login')->middleware('guest');
 Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback'])->name('google.callback')->middleware('guest');
-Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
 
 Route::get('/profil', [HomeController::class, 'profil'])->middleware('auth');
 
@@ -71,6 +69,7 @@ Route::get('/detpayment', function () {
     return view('user.detail-payment');
 });
 
+Route::get('/detailblog', [BlogController::class, 'konten'])->middleware('auth');
 
 Route::get('/listprogram', function () {
     return view('user.listprogram');
@@ -96,9 +95,13 @@ Route::get('/createslugkategori', [KategoriProgamController::class, 'checkSlug']
 Route::get('/dashboard/program', [ProgramController::class, 'index'])->middleware('admin');
 Route::get('/dashboard/createprogram', [ProgramController::class, 'indexcreate'])->middleware('admin');
 Route::post('/dashboard/createprogram', [ProgramController::class, 'store'])->middleware('admin');
-
 Route::get('/dashboard/allprogram', [ProgramController::class, 'allprogram'])->middleware('admin');
 Route::get('/dashboard/pendingprogram', [ProgramController::class, 'pendingprogram'])->middleware('admin');
 Route::get('/dashboard/doneprogram', [ProgramController::class, 'doneprogram'])->middleware('admin');
+Route::get('/dashboard-detailprogram/{slug}', [ProgramController::class, 'detailprogram'])->middleware('admin');
+Route::post('/dashboard-verifikasi', [ProgramController::class, 'verifikasi'])->middleware('admin');
+Route::post('/dashboard-batalkan', [ProgramController::class, 'batalkan'])->middleware('admin');
+
+
 
 
